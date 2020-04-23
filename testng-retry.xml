@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE testNG SYSTEM "./testng-1.0.dtd" >
+<!-- thread-count="1" 为同时执行的线程数 parallel="tests" 为同时执行的测试级别，可配置为false,methods，tests，classes，instances -->
+<suite name="TestNGRtryTest" thread-count="1" parallel="false">
+    <listeners>
+    	<listener class-name="com.framework.util.retry.RetryListener"></listener>
+    </listeners>
+
+	<test name="testng-retry">
+		<classes>
+
+			<class name="com.testcase.MyRetryTest"></class>
+		</classes>
+	</test>
+</suite>
